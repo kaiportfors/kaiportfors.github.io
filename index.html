@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="jquery.fullPage.min.js"></script>
+    <link rel="stylesheet" href="jquery.fullPage.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Kuya Kai</title>
+</head>
+<body>
+    <div id="navbar">
+        <div class="w3-top">
+            <div class="w3-bar w3-black w3-card-2">
+                <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                <a href="#home" class="w3-wide w3-bar-item w3-button w3-padding-large">Home</a>
+                <a href="#about" class="w3-wide w3-bar-item w3-button w3-padding-large w3-hide-small">About</a>
+                <a href="#music" class="w3-wide w3-bar-item w3-button w3-padding-large w3-hide-small">Music</a>
+                <a href="#gigs" class="w3-wide w3-bar-item w3-button w3-padding-large w3-hide-small">Gigs</a>
+                <a href="#contact" class="w3-wide w3-bar-item w3-button w3-padding-large w3-hide-small">Contact</a>
+                <a href="https://www.facebook.com/kuyakai97/"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/kuyakai97/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.snapchat.com/add/kaikentportfors"><i class="fa fa-snapchat"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="wrapper">
+        <!--- Home -->
+        <div class="section w3-black" data-anchor="home">
+            <!-- Automatic Slideshow Images -->
+            <div class="mySlides w3-display-container w3-center">
+                <img src="images/summerheat.jpg" style="width:100%" />
+            </div>
+            <div class="mySlides w3-display-container w3-center">
+                <img src="images/lebonk.jpg" style="width:100%">
+            </div>
+            <div class="mySlides w3-display-container w3-center">
+                <img src="images/hawaiishirt.jpg" style="width:100%">
+            </div>
+        </div>
+
+
+        <!--- About -->
+        <div class="section w3-black" data-anchor="about">
+            <div class="w3-container w3-content w3-center" data-anchor="about">
+                <h2 class="w3-wide">About</h2>
+                <p class="w3-justify">
+                    Kai Pörtfors, better known by his stage name Kuya Kai is a half Filipino and half Finnish Deejay and is currently living in Helsinki, Finland. He is known to make the dancefloor go crazy
+                    with his mixes and sick vibes. He plays a wide range genres such as Hip Hop, House, Funk and the list goes on. He is currently the Resident DJ of the legendary PerjantaiBonk (LeBonk, Helsinki). If you ever get the chance to see him perform live, don't miss out!
+                </p>
+            </div>
+        </div>
+
+        <!--- Music -->
+        <div class="section w3-black" data-anchor="music">
+            <div class="w3-container w3-center w3-content" style="max-width:800px" data-anchor="music">
+                <h2 class="w3-wide">Music</h2>
+                <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fkuyakaiofficial%2Fparty-vibes-vol-3%2F" frameborder="0"></iframe>
+                <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fkuyakaiofficial%2Fparty-mix-2017-vol-2%2F" frameborder="0"></iframe>
+                <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fkuyakaiofficial%2Fkuya-kai-party-mix-2017%2F" frameborder="0"></iframe>
+            </div>
+        </div>
+
+
+        <!--- Gigs -->
+
+        <div class="section w3-black" data-anchor="gigs">
+            <h2 class="w3-wide w3-center">Gigs</h2>
+            <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script>
+            <a class="bit-widget-initializer" data-artist-name="Kuya Kai" data-display-local-dates="false" data-display-past-dates="true" data-auto-style="false" data-text-color="#FFFFFF" data-link-color="#000000" data-popup-background-color="#000000" data-background-color="#000000" data-display-limit="5" data-link-text-color="#FFFFFF"></a>
+        </div>
+
+        <!-- Contact-->
+        <div class="section w3-black" data-anchor="contact">
+            <div class="w3-container w3-content w3-padding-64" style="max-width:800px">        
+                <h2 class="w3-wide w3-center">Contact</h2>
+                <div class="w3-row w3-padding-32">
+                    <div class="w3-col m6 w3-large w3-margin-bottom">
+                        <i class="fa fa-map-marker" style="width:30px"></i> Helsinki, Finland<br>
+                        <i class="fa fa-phone" style="width:30px"></i> Phone: +358458499277<br>
+                        <i class="fa fa-envelope" style="width:30px"> </i> Bookings: djkuyakai@gmail.com<br>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        <!-- End Page -->
+        </div>
+
+            <script>
+                $(document).ready(function () {
+                    $('#wrapper').fullpage();
+                });
+
+                // Automatic Slideshow - change image every 4 seconds
+                var myIndex = 0;
+                carousel();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) { myIndex = 1 }
+                    x[myIndex - 1].style.display = "block";
+                    setTimeout(carousel, 4000);
+                }
+            </script>
+
+</body>
+</html>
